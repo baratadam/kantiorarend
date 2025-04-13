@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Órarend</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Órarend Kezelő</h1>
+  </header>
+
+  <main class="main-content">
+    <section class="timetable-section">
+      <h2>Órarend</h2>
+      <table id="timetable">
+        <thead>
+          <tr>
+            <th>Nap</th>
+            <th>Óraszám</th>
+            <th>Tantárgy</th>
+            <th>Műveletek</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dinamikusan generált sorok -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="form-section">
+      <h2>Új óra hozzáadása</h2>
+      <form id="add-form">
+        <div class="form-group">
+          <label for="day">Nap:</label>
+          <select id="day" name="day" required>
+            <option value="">Válassz napot</option>
+            <option>Hétfő</option>
+            <option>Kedd</option>
+            <option>Szerda</option>
+            <option>Csütörtök</option>
+            <option>Péntek</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="classNumber">Óraszám:</label>
+          <input type="number" id="classNumber" name="classNumber" placeholder="Pl. 1" required>
+        </div>
+        <div class="form-group">
+          <label for="className">Tantárgy:</label>
+          <input type="text" id="className" name="className" placeholder="Pl. Matematika" required>
+        </div>
+        <button type="submit" class="btn">Hozzáadás</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
